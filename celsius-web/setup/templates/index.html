@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+  Lista de veículos
+{% endblock %}
+
+{% block conteudo %}
+<div class="container px-5 d-flex flex-column gap-4">
+  <div class="card rounded">
+    <img
+      src="/static/img/aluguel-de-carros.jpg"
+      class="img-fluid rounded"
+      style="max-height: 500px; object-fit: cover"
+    />
+  </div>
+  
+  <div class="d-flex flex-column mb-4">
+    <h1 class="text-info fw-bolder">Auto Click</h1>
+    <h5 class="text-muted">Seu parceiro na busca do carro ideal.</h5>
+  </div>
+  
+  {% if mensagem %}
+    <div class="alert alert-danger" role="alert">{{ mensagem }}</div>
+  {% endif %}
+</div>
+{% endblock %}
